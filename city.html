@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="bs">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="theme-color" content="#e74c3c">
+        <link rel="icon" type="image/png" href="slike/logo.png">
+        <title>Pizzeria City | Autentična Italijanska Pizza u Bihaću</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Tangerine:wght@700&display=swap" rel="stylesheet">
+        <link rel="manifest" href="manifest.json">
+    </head>
+<body>
+    <div id="loading" class="loading-square">
+        <div class="spinner">
+            <div class="pizza-slice">
+                <div class="crust"></div>
+                <div class="toppings">
+                    <div class="pepperoni"></div>
+                    <div class="pepperoni"></div>
+                    <div class="pepperoni"></div>
+                </div>
+            </div>
+        </div>
+        <p>Pizzeria City se učitava...</p>
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <div class="logo-container">
+                        <img src="slike/logo.png" alt="Pizzeria City Logo" class="logo-image">
+                        <span class="logo-text">Pizzeria City</span>
+                    </div>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home"><i class="fas fa-home"></i> Početna</a></li>
+                    <li><a href="#about"><i class="fas fa-info-circle"></i> O nama</a></li>
+                    <li><a href="#menu"><i class="fas fa-utensils"></i> Meni</a></li>
+                    <li><a href="#order"><i class="fas fa-shopping-cart"></i> Naruči</a></li>
+                    <li><a href="#gallery"><i class="fas fa-images"></i> Galerija</a></li>
+                    <li><a href="#contact"><i class="fas fa-phone-alt"></i> Kontakt</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-image"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Pizzeria City</h1>
+            <h2 class="hero-subtitle">Autentična italijanska pizza u srcu Bihaća</h2>
+            <div class="hero-buttons">
+                <a href="#menu" class="btn btn-primary">Pogledaj meni</a>
+                <a href="#order" class="btn btn-outline">Naruči online</a>
+            </div>
+            <div class="scroll-down">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <h3 class="section-title">Naša Priča</h3>
+                <div class="section-subtitle">Tradicija & Strast</div>
+                <div class="pizza-divider">
+                    <div class="slice"></div>
+                    <div class="slice"></div>
+                    <div class="slice"></div>
+                </div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="lead-paragraph">Osnovana 2010. godine, Pizzeria City donosi pravi okus Italije u Bihać, koristeći tradicionalne metode pripreme i originalne recepte.</p>
+                    
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-fire"></i>
+                            </div>
+                            <h4>Peć na drva</h4>
+                            <p>Naša pizza se peče u autentičnoj peći na drva za savršenu teksturu i okus.</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-seedling"></i>
+                            </div>
+                            <h4>Svježi sastojci</h4>
+                            <p>Koristimo samo svježe, visokokvalitetne sastojke svakodnevno nabavljane.</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-pizza-slice"></i>
+                            </div>
+                            <h4>Originalni recepti</h4>
+                            <p>Naši recepti dolaze direktno iz Italije, sa dugogodišnjom tradicijom.</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fa-solid fa-utensils"></i>
+                            </div>
+                            <h4>Svaki zalogaj, nova priča</h4>
+                            <p>Kreiramo recepte koji inspirišu i bude strast za dobrom hranom.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-frame">
+                        <img src="slike/man.jpg" alt="Pizza majstor" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <div class="section-header">
+                <h3 class="section-title">Naš Meni</h3>
+                <div class="section-subtitle">Okusi Italije</div>
+                <div class="pizza-divider">
+                    <div class="slice"></div>
+                    <div class="slice"></div>
+                    <div class="slice"></div>
+                </div>
+                <div class="slice-hint" style="text-align: center; margin-top: 8px;">
+                    <span style="font-size: 14px; color: #999; display: inline-flex; align-items: center; gap: 4px;">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="16" x2="12" y2="12"></line>
+                            <line x1="12" y1="8" x2="12" y2="8"></line>
+                        </svg>
+                        Pređite mišem ili klinite na kružić da vidite sliku jela!
+                    </span>
+                </div>
+            </div>
+            
+            <div class="menu-tabs">
+                <button class="tab-btn active" data-tab="pizza">
+                    <i class="fas fa-pizza-slice"></i> Pizza
+                </button>
+                <button class="tab-btn" data-tab="pasta">
+                    <i class="fas fa-utensils"></i> Pasta
+                </button>
+                <button class="tab-btn" data-tab="salate">
+                    <i class="fas fa-leaf"></i> Salate
+                </button>
+                <button class="tab-btn" data-tab="pica">
+                    <i class="fas fa-glass-cheers"></i> Pića
+                </button>
+            </div>
+            <div class="menu-content">
+                <div class="menu-category active" id="pizza">
+                    <div class="menu-item">
+                        <div class="menu-item-hover" style="--item-image: url('https://www.simplyrecipes.com/thmb/8caxM88NgxZjz-T2aeRW3xjhzBg=/2000x1125/smart/filters:no_upscale()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2019__09__easy-margherita-pizza-lead-3-8f256746d649404baa36a44d271329bc.jpg')"></div>
+                        <div class="item-header">
+                            <h4>Margherita</h4>
+                            <span class="price">10 KM</span>
+                        </div>
+                        <p>Pelat, mozzarella, bosiljak</p>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-hover" style="--item-image: url('https://www.simplyrecipes.com/thmb/8caxM88NgxZjz-T2aeRW3xjhzBg=/2000x1125/smart/filters:no_upscale()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2019__09__easy-margherita-pizza-lead-3-8f256746d649404baa36a44d271329bc.jpg')"></div>
+                        <div class="item-header">
+                            <h4>Capricciosa</h4>
+                            <span class="price">12 KM</span>
+                        </div>
+                        <p>Pelat, mozzarella, šunka, pečurke, artičoke</p>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-hover" style="--item-image: url('https://www.simplyrecipes.com/thmb/8caxM88NgxZjz-T2aeRW3xjhzBg=/2000x1125/smart/filters:no_upscale()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2019__09__easy-margherita-pizza-lead-3-8f256746d649404baa36a44d271329bc.jpg')"></div>
+                        <div class="item-header">
+                            <h4>Quattro Formaggi</h4>
+                            <span class="price">14 KM</span>
+                        </div>
+                        <p>Pelat, mozzarella, gorgonzola, parmezan, ricotta</p>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-hover" style="--item-image: url('https://www.simplyrecipes.com/thmb/8caxM88NgxZjz-T2aeRW3xjhzBg=/2000x1125/smart/filters:no_upscale()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2019__09__easy-margherita-pizza-lead-3-8f256746d649404baa36a44d271329bc.jpg')"></div>
+                        <div class="item-header">
+                            <h4>Diavola</h4>
+                            <span class="price">13 KM</span>
+                        </div>
+                        <p>Pelat, mozzarella, kulen, feferoni</p>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-hover" style="--item-image: url('https://www.simplyrecipes.com/thmb/8caxM88NgxZjz-T2aeRW3xjhzBg=/2000x1125/smart/filters:no_upscale()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2019__09__easy-margherita-pizza-lead-3-8f256746d649404baa36a44d271329bc.jpg')"></div>
+                        <div class="item-header">
+                            <h4>Vegetariana</h4>
+                            <span class="price">12 KM</span>
+                        </div>
+                        <p>Pelat, mozzarella, povrće po izboru</p>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-hover" style="--item-image: url('https://www.simplyrecipes.com/thmb/8caxM88NgxZjz-T2aeRW3xjhzBg=/2000x1125/smart/filters:no_upscale()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2019__09__easy-margherita-pizza-lead-3-8f256746d649404baa36a44d271329bc.jpg')"></div>
+                        <div class="item-header">
+                            <h4>Calzone</h4>
+                            <span class="price">15 KM</span>
+                        </div>
+                        <p>Zatvorena pizza sa šunkom, sirom i pečurkama</p>
+                    </div>
+                    
+                    <div class="menu-item hidden-item">
+                        <div class="menu-item-hover" style="--item-image: url('https://www.simplyrecipes.com/thmb/8caxM88NgxZjz-T2aeRW3xjhzBg=/2000x1125/smart/filters:no_upscale()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2019__09__easy-margherita-pizza-lead-3-8f256746d649404baa36a44d271329bc.jpg')"></div>
+                        <div class="item-header">
+                            <h4>Prosciutto</h4>
+                            <span class="price">16 KM</span>
+                        </div>
+                        <p>Pelat, mozzarella, pršut, rukola</p>
+                    </div>
+                    
+                    <div class="menu-item hidden-item">
+                        <div class="menu-item-hover" style="--item-image: url('https://www.simplyrecipes.com/thmb/8caxM88NgxZjz-T2aeRW3xjhzBg=/2000x1125/smart/filters:no_upscale()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2019__09__easy-margherita-pizza-lead-3-8f256746d649404baa36a44d271329bc.jpg')"></div>
+                        <div class="item-header">
+                            <h4>Quattro Stagioni</h4>
+                            <span class="price">15 KM</span>
+                        </div>
+                        <p>Pelat, mozzarella, šunka, pečurke, artičoke, masline</p>
+                    </div>
+                    
+                    <button class="show-more-btn">Prikaži više</button>
+                    <button class="show-less-btn">Prikaži manje</button>
+                </div>
+
+                <div class="menu-category" id="pasta">
+                    <div class="menu-item">
+                        <div class="menu-item-hover" style="--item-image: url('https://www.simplyrecipes.com/thmb/8caxM88NgxZjz-T2aeRW3xjhzBg=/2000x1125/smart/filters:no_upscale()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2019__09__easy-margherita-pizza-lead-3-8f256746d649404baa36a44d271329bc.jpg')"></div>
+                        <div class="item-header">
+                            <h4>Carbonara</h4>
+                            <span class="price">12 KM</span>
+                        </div>
+                        <p>Špageti, jaja, panceta, parmezan</p>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-hover" style="--item-image: url('https://www.simplyrecipes.com/thmb/8caxM88NgxZjz-T2aeRW3xjhzBg=/2000x1125/smart/filters:no_upscale()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2019__09__easy-margherita-pizza-lead-3-8f256746d649404baa36a44d271329bc.jpg')"></div>
+                        <div class="item-header">
+                            <h4>Bolognese</h4>
+                            <span class="price">11 KM</span>
+                        </div>
+                        <p>Špageti, umak od mljevenog mesa</p>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-hover" style="--item-image: url('https://www.simplyrecipes.com/thmb/8caxM88NgxZjz-T2aeRW3xjhzBg=/2000x1125/smart/filters:no_upscale()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2019__09__easy-margherita-pizza-lead-3-8f256746d649404baa36a44d271329bc.jpg')"></div>
+                        <div class="item-header">
+                            <h4>Pesto</h4>
+                            <span class="price">10 KM</span>
+                        </div>
+                        <p>Špageti, pesto sos, pinjoli, parmezan</p>
+                    </div>
+                    
+                    <button class="show-more-btn" style="display: none;">Prikaži više</button>
+                    <button class="show-less-btn" style="display: none;">Prikaži manje</button>
+                </div>
+
+                <div class="menu-category" id="salate">
+                    <div class="menu-item">
+                        <div class="menu-item-hover" style="--item-image: url('https://www.simplyrecipes.com/thmb/8caxM88NgxZjz-T2aeRW3xjhzBg=/2000x1125/smart/filters:no_upscale()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2019__09__easy-margherita-pizza-lead-3-8f256746d649404baa36a44d271329bc.jpg')"></div>
+                        <div class="item-header">
+                            <h4>Caprese</h4>
+                            <span class="price">8 KM</span>
+                        </div>
+                        <p>Paradajz, mozzarella, bosiljak</p>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-hover" style="--item-image: url('https://www.simplyrecipes.com/thmb/8caxM88NgxZjz-T2aeRW3xjhzBg=/2000x1125/smart/filters:no_upscale()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2019__09__easy-margherita-pizza-lead-3-8f256746d649404baa36a44d271329bc.jpg')"></div>
+                        <div class="item-header">
+                            <h4>Cesarska</h4>
+                            <span class="price">9 KM</span>
+                        </div>
+                        <p>Zelena salata, krutoni, parmezan, cesar dressing</p>
+                    </div>
+                    
+                    <button class="show-more-btn" style="display: none;">Prikaži više</button>
+                    <button class="show-less-btn" style="display: none;">Prikaži manje</button>
+                </div>
+
+                <div class="menu-category" id="prilozi">
+                    <div class="menu-item">
+                        <div class="menu-item-hover" style="--item-image: url('https://www.simplyrecipes.com/thmb/8caxM88NgxZjz-T2aeRW3xjhzBg=/2000x1125/smart/filters:no_upscale()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2019__09__easy-margherita-pizza-lead-3-8f256746d649404baa36a44d271329bc.jpg')"></div>
+                        <div class="item-header">
+                            <h4>Pomfrit</h4>
+                            <span class="price">3 KM</span>
+                        </div>
+                        <p>Prženi krompirići</p>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-hover" style="--item-image: url('https://www.simplyrecipes.com/thmb/8caxM88NgxZjz-T2aeRW3xjhzBg=/2000x1125/smart/filters:no_upscale()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2019__09__easy-margherita-pizza-lead-3-8f256746d649404baa36a44d271329bc.jpg')"></div>
+                        <div class="item-header">
+                            <h4>Dodatni sos</h4>
+                            <span class="price">2 KM</span>
+                        </div>
+                        <p>Dodatni sos po izboru</p>
+                    </div>
+                    
+                    <button class="show-more-btn" style="display: none;">Prikaži više</button>
+                    <button class="show-less-btn" style="display: none;">Prikaži manje</button>
+                </div>
+
+                <div class="menu-category" id="pica">
+                    <div class="menu-item">
+                        <div class="menu-item-hover" style="--item-image: url('https://www.simplyrecipes.com/thmb/8caxM88NgxZjz-T2aeRW3xjhzBg=/2000x1125/smart/filters:no_upscale()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2019__09__easy-margherita-pizza-lead-3-8f256746d649404baa36a44d271329bc.jpg')"></div>
+                        <div class="item-header">
+                            <h4>Pivo (0.5l)</h4>
+                            <span class="price">4 KM</span>
+                        </div>
+                        <p>Točeno pivo</p>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-hover" style="--item-image: url('https://www.simplyrecipes.com/thmb/8caxM88NgxZjz-T2aeRW3xjhzBg=/2000x1125/smart/filters:no_upscale()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2019__09__easy-margherita-pizza-lead-3-8f256746d649404baa36a44d271329bc.jpg')"></div>
+                        <div class="item-header">
+                            <h4>Pivo (0.33l)</h4>
+                            <span class="price">4.50 KM</span>
+                        </div>
+                        <p>Pivo u flašici</p>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-hover" style="--item-image: url('https://www.simplyrecipes.com/thmb/8caxM88NgxZjz-T2aeRW3xjhzBg=/2000x1125/smart/filters:no_upscale()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2019__09__easy-margherita-pizza-lead-3-8f256746d649404baa36a44d271329bc.jpg')"></div>
+                        <div class="item-header">
+                            <h4>Voda (0.5l)</h4>
+                            <span class="price">1 KM</span>
+                        </div>
+                        <p>Mineralna voda</p>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-hover" style="--item-image: url('https://www.simplyrecipes.com/thmb/8caxM88NgxZjz-T2aeRW3xjhzBg=/2000x1125/smart/filters:no_upscale()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2019__09__easy-margherita-pizza-lead-3-8f256746d649404baa36a44d271329bc.jpg')"></div>
+                        <div class="item-header">
+                            <h4>Gazirana voda (0.33l)</h4>
+                            <span class="price">2 KM</span>
+                        </div>
+                        <p>Gazirana mineralna voda</p>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-hover" style="--item-image: url('https://www.simplyrecipes.com/thmb/8caxM88NgxZjz-T2aeRW3xjhzBg=/2000x1125/smart/filters:no_upscale()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2019__09__easy-margherita-pizza-lead-3-8f256746d649404baa36a44d271329bc.jpg')"></div>
+                        <div class="item-header">
+                            <h4>Sok (0.33l)</h4>
+                            <span class="price">3 KM</span>
+                        </div>
+                        <p>Voćni sok</p>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-hover" style="--item-image: url('https://www.simplyrecipes.com/thmb/8caxM88NgxZjz-T2aeRW3xjhzBg=/2000x1125/smart/filters:no_upscale()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2019__09__easy-margherita-pizza-lead-3-8f256746d649404baa36a44d271329bc.jpg')"></div>
+                        <div class="item-header">
+                            <h4>Kafa</h4>
+                            <span class="price">2 KM</span>
+                        </div>
+                        <p>Espresso ili cappuccino</p>
+                    </div>
+                    
+                    <button class="show-more-btn" style="display: none;">Prikaži više</button>
+                    <button class="show-less-btn" style="display: none;">Prikaži manje</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="order" class="order-section">
+        <div class="container">
+            <div class="section-header">
+                <h3 class="section-title">Naručite Online</h3>
+                <div class="section-subtitle">Brza dostava</div>
+                <div class="pizza-divider">
+                    <div class="slice"></div>
+                    <div class="slice"></div>
+                    <div class="slice"></div>
+                </div>
+            </div>
+            <div class="order-content">
+                <div class="order-menu">
+                    <div class="order-category">
+                        <div class="category-header" data-category="pizza">
+                            <h4>Pizza</h4>
+                            <i class="fas fa-pizza-slice"></i>
+                        </div>
+                        <div class="category-items" data-category="pizza" style="display:none;">
+                            <div class="order-item">
+                                <div class="order-item-info">
+                                    <div class="order-item-name">Margherita</div>
+                                    <div class="order-item-desc">Pelat, mozzarella, bosiljak</div>
+                                    <div class="order-item-price">10 KM</div>
+                                </div>
+                                <div class="order-item-controls">
+                                    <button class="quantity-btn minus" data-item="margherita">-</button>
+                                    <input type="number" class="quantity-input" data-item="margherita" value="0" min="0">
+                                    <button class="quantity-btn plus" data-item="margherita">+</button>
+                                    <button class="add-to-cart" data-item='{"id":"margherita","name":"Margherita","price":10}'>Dodaj</button>
+                                </div>
+                            </div>
+                            
+                            <div class="order-item">
+                                <div class="order-item-info">
+                                    <div class="order-item-name">Capricciosa</div>
+                                    <div class="order-item-desc">Pelat, mozzarella, šunka, pečurke, artičoke</div>
+                                    <div class="order-item-price">12 KM</div>
+                                </div>
+                                <div class="order-item-controls">
+                                    <button class="quantity-btn minus" data-item="capricciosa">-</button>
+                                    <input type="number" class="quantity-input" data-item="capricciosa" value="0" min="0">
+                                    <button class="quantity-btn plus" data-item="capricciosa">+</button>
+                                    <button class="add-to-cart" data-item='{"id":"capricciosa","name":"Capricciosa","price":12}'>Dodaj</button>
+                                </div>
+                            </div>
+                            
+                            <div class="order-item">
+                                <div class="order-item-info">
+                                    <div class="order-item-name">Quattro Formaggi</div>
+                                    <div class="order-item-desc">Pelat, mozzarella, gorgonzola, parmezan, ricotta</div>
+                                    <div class="order-item-price">14 KM</div>
+                                </div>
+                                <div class="order-item-controls">
+                                    <button class="quantity-btn minus" data-item="quattro-formaggi">-</button>
+                                    <input type="number" class="quantity-input" data-item="quattro-formaggi" value="0" min="0">
+                                    <button class="quantity-btn plus" data-item="quattro-formaggi">+</button>
+                                    <button class="add-to-cart" data-item='{"id":"quattro-formaggi","name":"Quattro Formaggi","price":14}'>Dodaj</button>
+                                </div>
+                            </div>
+                            
+                            <div class="order-item">
+                                <div class="order-item-info">
+                                    <div class="order-item-name">Diavola</div>
+                                    <div class="order-item-desc">Pelat, mozzarella, kulen, feferoni</div>
+                                    <div class="order-item-price">13 KM</div>
+                                </div>
+                                <div class="order-item-controls">
+                                    <button class="quantity-btn minus" data-item="diavola">-</button>
+                                    <input type="number" class="quantity-input" data-item="diavola" value="0" min="0">
+                                    <button class="quantity-btn plus" data-item="diavola">+</button>
+                                    <button class="add-to-cart" data-item='{"id":"diavola","name":"Diavola","price":13}'>Dodaj</button>
+                                </div>
+                            </div>
+                            
+                            <div class="order-item">
+                                <div class="order-item-info">
+                                    <div class="order-item-name">Vegetariana</div>
+                                    <div class="order-item-desc">Pelat, mozzarella, povrće po izboru</div>
+                                    <div class="order-item-price">12 KM</div>
+                                </div>
+                                <div class="order-item-controls">
+                                    <button class="quantity-btn minus" data-item="vegetariana">-</button>
+                                    <input type="number" class="quantity-input" data-item="vegetariana" value="0" min="0">
+                                    <button class="quantity-btn plus" data-item="vegetariana">+</button>
+                                    <button class="add-to-cart" data-item='{"id":"vegetariana","name":"Vegetariana","price":12}'>Dodaj</button>
+                                </div>
+                            </div>
+                            
+                            <div class="order-item">
+                                <div class="order-item-info">
+                                    <div class="order-item-name">Calzone</div>
+                                    <div class="order-item-desc">Zatvorena pizza sa šunkom, sirom i pečurkama</div>
+                                    <div class="order-item-price">15 KM</div>
+                                </div>
+                                <div class="order-item-controls">
+                                    <button class="quantity-btn minus" data-item="calzone">-</button>
+                                    <input type="number" class="quantity-input" data-item="calzone" value="0" min="0">
+                                    <button class="quantity-btn plus" data-item="calzone">+</button>
+                                    <button class="add-to-cart" data-item='{"id":"calzone","name":"Calzone","price":15}'>Dodaj</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="order-category">
+                        <div class="category-header" data-category="pasta">
+                            <h4>Pasta</h4>
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <div class="category-items" data-category="pasta" style="display:none;">
+                            <div class="order-item">
+                                <div class="order-item-info">
+                                    <div class="order-item-name">Carbonara</div>
+                                    <div class="order-item-desc">Špageti, jaja, panceta, parmezan</div>
+                                    <div class="order-item-price">12 KM</div>
+                                </div>
+                                <div class="order-item-controls">
+                                    <button class="quantity-btn minus" data-item="carbonara">-</button>
+                                    <input type="number" class="quantity-input" data-item="carbonara" value="0" min="0">
+                                    <button class="quantity-btn plus" data-item="carbonara">+</button>
+                                    <button class="add-to-cart" data-item='{"id":"carbonara","name":"Carbonara","price":12}'>Dodaj</button>
+                                </div>
+                            </div>
+                            
+                            <div class="order-item">
+                                <div class="order-item-info">
+                                    <div class="order-item-name">Bolognese</div>
+                                    <div class="order-item-desc">Špageti, umak od mljevenog mesa</div>
+                                    <div class="order-item-price">11 KM</div>
+                                </div>
+                                <div class="order-item-controls">
+                                    <button class="quantity-btn minus" data-item="bolognese">-</button>
+                                    <input type="number" class="quantity-input" data-item="bolognese" value="0" min="0">
+                                    <button class="quantity-btn plus" data-item="bolognese">+</button>
+                                    <button class="add-to-cart" data-item='{"id":"bolognese","name":"Bolognese","price":11}'>Dodaj</button>
+                                </div>
+                            </div>
+                            
+                            <div class="order-item">
+                                <div class="order-item-info">
+                                    <div class="order-item-name">Pesto</div>
+                                    <div class="order-item-desc">Špageti, pesto sos, pinjoli, parmezan</div>
+                                    <div class="order-item-price">10 KM</div>
+                                </div>
+                                <div class="order-item-controls">
+                                    <button class="quantity-btn minus" data-item="pesto">-</button>
+                                    <input type="number" class="quantity-input" data-item="pesto" value="0" min="0">
+                                    <button class="quantity-btn plus" data-item="pesto">+</button>
+                                    <button class="add-to-cart" data-item='{"id":"pesto","name":"Pesto","price":10}'>Dodaj</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="order-category">
+                        <div class="category-header" data-category="salate">
+                            <h4>Salate</h4>
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <div class="category-items" data-category="salate" style="display:none;">
+                            <div class="order-item">
+                                <div class="order-item-info">
+                                    <div class="order-item-name">Caprese</div>
+                                    <div class="order-item-desc">Paradajz, mozzarella, bosiljak</div>
+                                    <div class="order-item-price">8 KM</div>
+                                </div>
+                                <div class="order-item-controls">
+                                    <button class="quantity-btn minus" data-item="caprese">-</button>
+                                    <input type="number" class="quantity-input" data-item="caprese" value="0" min="0">
+                                    <button class="quantity-btn plus" data-item="caprese">+</button>
+                                    <button class="add-to-cart" data-item='{"id":"caprese","name":"Caprese","price":8}'>Dodaj</button>
+                                </div>
+                            </div>
+                            
+                            <div class="order-item">
+                                <div class="order-item-info">
+                                    <div class="order-item-name">Cesarska</div>
+                                    <div class="order-item-desc">Zelena salata, krutoni, parmezan, cesar dressing</div>
+                                    <div class="order-item-price">9 KM</div>
+                                </div>
+                                <div class="order-item-controls">
+                                    <button class="quantity-btn minus" data-item="cesarska">-</button>
+                                    <input type="number" class="quantity-input" data-item="cesarska" value="0" min="0">
+                                    <button class="quantity-btn plus" data-item="cesarska">+</button>
+                                    <button class="add-to-cart" data-item='{"id":"cesarska","name":"Cesarska","price":9}'>Dodaj</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="order-category">
+                        <div class="category-header" data-category="prilozi">
+                            <h4>Prilozi</h4>
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <div class="category-items" data-category="prilozi" style="display:none;">
+                            <div class="order-item">
+                                <div class="order-item-info">
+                                    <div class="order-item-name">Pomfrit</div>
+                                    <div class="order-item-desc">Prženi krompirići</div>
+                                    <div class="order-item-price">3 KM</div>
+                                </div>
+                                <div class="order-item-controls">
+                                    <button class="quantity-btn minus" data-item="pomfrit">-</button>
+                                    <input type="number" class="quantity-input" data-item="pomfrit" value="0" min="0">
+                                    <button class="quantity-btn plus" data-item="pomfrit">+</button>
+                                    <button class="add-to-cart" data-item='{"id":"pomfrit","name":"Pomfrit","price":3}'>Dodaj</button>
+                                </div>
+                            </div>
+                            
+                            <div class="order-item">
+                                <div class="order-item-info">
+                                    <div class="order-item-name">Dodatni sos</div>
+                                    <div class="order-item-desc">Dodatni sos po izboru</div>
+                                    <div class="order-item-price">2 KM</div>
+                                </div>
+                                <div class="order-item-controls">
+                                    <button class="quantity-btn minus" data-item="dodatni-sos">-</button>
+                                    <input type="number" class="quantity-input" data-item="dodatni-sos" value="0" min="0">
+                                    <button class="quantity-btn plus" data-item="dodatni-sos">+</button>
+                                    <button class="add-to-cart" data-item='{"id":"dodatni-sos","name":"Dodatni sos","price":2}'>Dodaj</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="order-category">
+                        <div class="category-header" data-category="pica">
+                            <h4>Pića</h4>
+                            <i class="fas fa-wine-glass-alt"></i>
+                        </div>
+                        <div class="category-items" data-category="pica" style="display:none;">
+                            <div class="order-item">
+                                <div class="order-item-info">
+                                    <div class="order-item-name">Pivo (0.5l)</div>
+                                    <div class="order-item-desc">Točeno pivo</div>
+                                    <div class="order-item-price">4 KM</div>
+                                </div>
+                                <div class="order-item-controls">
+                                    <button class="quantity-btn minus" data-item="pivo05">-</button>
+                                    <input type="number" class="quantity-input" data-item="pivo05" value="0" min="0">
+                                    <button class="quantity-btn plus" data-item="pivo05">+</button>
+                                    <button class="add-to-cart" data-item='{"id":"pivo05","name":"Pivo (0.5l)","price":4}'>Dodaj</button>
+                                </div>
+                            </div>
+                            
+                            <div class="order-item">
+                                <div class="order-item-info">
+                                    <div class="order-item-name">Pivo (0.33l)</div>
+                                    <div class="order-item-desc">Pivo u flašici</div>
+                                    <div class="order-item-price">4.50 KM</div>
+                                </div>
+                                <div class="order-item-controls">
+                                    <button class="quantity-btn minus" data-item="pivo033">-</button>
+                                    <input type="number" class="quantity-input" data-item="pivo033" value="0" min="0">
+                                    <button class="quantity-btn plus" data-item="pivo033">+</button>
+                                    <button class="add-to-cart" data-item='{"id":"pivo033","name":"Pivo (0.33l)","price":4.5}'>Dodaj</button>
+                                </div>
+                            </div>
+                            
+                            <div class="order-item">
+                                <div class="order-item-info">
+                                    <div class="order-item-name">Voda (0.5l)</div>
+                                    <div class="order-item-desc">Mineralna voda</div>
+                                    <div class="order-item-price">1 KM</div>
+                                </div>
+                                <div class="order-item-controls">
+                                    <button class="quantity-btn minus" data-item="voda05">-</button>
+                                    <input type="number" class="quantity-input" data-item="voda05" value="0" min="0">
+                                    <button class="quantity-btn plus" data-item="voda05">+</button>
+                                    <button class="add-to-cart" data-item='{"id":"voda05","name":"Voda (0.5l)","price":1}'>Dodaj</button>
+                                </div>
+                            </div>
+                            
+                            <div class="order-item">
+                                <div class="order-item-info">
+                                    <div class="order-item-name">Gazirana voda (0.33l)</div>
+                                    <div class="order-item-desc">Gazirana mineralna voda</div>
+                                    <div class="order-item-price">2 KM</div>
+                                </div>
+                                <div class="order-item-controls">
+                                    <button class="quantity-btn minus" data-item="gazirana-voda">-</button>
+                                    <input type="number" class="quantity-input" data-item="gazirana-voda" value="0" min="0">
+                                    <button class="quantity-btn plus" data-item="gazirana-voda">+</button>
+                                    <button class="add-to-cart" data-item='{"id":"gazirana-voda","name":"Gazirana voda (0.33l)","price":2}'>Dodaj</button>
+                                </div>
+                            </div>
+                            
+                            <div class="order-item">
+                                <div class="order-item-info">
+                                    <div class="order-item-name">Sok (0.33l)</div>
+                                    <div class="order-item-desc">Voćni sok</div>
+                                    <div class="order-item-price">3 KM</div>
+                                </div>
+                                <div class="order-item-controls">
+                                    <button class="quantity-btn minus" data-item="sok">-</button>
+                                    <input type="number" class="quantity-input" data-item="sok" value="0" min="0">
+                                    <button class="quantity-btn plus" data-item="sok">+</button>
+                                    <button class="add-to-cart" data-item='{"id":"sok","name":"Sok (0.33l)","price":3}'>Dodaj</button>
+                                </div>
+                            </div>
+                            
+                            <div class="order-item">
+                                <div class="order-item-info">
+                                    <div class="order-item-name">Kafa</div>
+                                    <div class="order-item-desc">Espresso ili cappuccino</div>
+                                    <div class="order-item-price">2 KM</div>
+                                </div>
+                                <div class="order-item-controls">
+                                    <button class="quantity-btn minus" data-item="kafa">-</button>
+                                    <input type="number" class="quantity-input" data-item="kafa" value="0" min="0">
+                                    <button class="quantity-btn plus" data-item="kafa">+</button>
+                                    <button class="add-to-cart" data-item='{"id":"kafa","name":"Kafa","price":2}'>Dodaj</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="order-cart">
+                    <h4 class="cart-title">Vaša narudžeba</h4>
+                    <div class="cart-items">
+                        <div class="empty-cart">Vaša korpa je prazna</div>
+                    </div>
+                    <div class="cart-total">
+                        <span>Ukupno:</span>
+                        <span class="total-amount">0 KM</span>
+                    </div>
+                    <button class="checkout-btn">Naručite</button>
+                    
+                    <div class="checkout-form">
+                        <h4>Podaci za narudžebu</h4>
+                        <div class="form-group">
+                            <label for="name">Ime i prezime *</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Broj telefona *</label>
+                            <input type="tel" id="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Adresa za dostavu *</label>
+                            <input type="text" id="address" required>
+                        </div>
+                        <div class="payment-note">
+                            <i class="fas fa-info-circle"></i> Plaćanje pouzećem prilikom preuzimanja
+                        </div>
+                        <div class="form-group">
+                            <label for="notes">Napomena (opciono)</label>
+                            <textarea id="notes" rows="3"></textarea>
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" class="cancel-order">Odustani</button>
+                            <button type="button" class="submit-order">Potvrdi narudžebu</button>
+                        </div>
+                    </div>
+                    
+                    <div class="order-success">
+                        <i class="fas fa-check-circle"></i>
+                        <h4>Hvala na narudžebi!</h4>
+                        <p>Vaša narudžeba je primljena. Kontaktirat ćemo vas u najkraćem mogućem roku.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <div class="section-header">
+                <h3 class="section-title">Naša Galerija</h3>
+                <div class="section-subtitle">Pogledajte naše specijalitete</div>
+                <div class="pizza-divider">
+                    <div class="slice"></div>
+                    <div class="slice"></div>
+                    <div class="slice"></div>
+                </div>
+            </div>
+            
+            <div class="gallery-container">
+                <button class="gallery-arrow gallery-arrow-left">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="gallery-slider">
+                    <div class="gallery-track">
+                        <div class="gallery-slide">
+                            <img src="slike/margarita.jpg" alt="Pizza Margherita" loading="lazy">
+                            <div class="slide-caption">Pizza Margherita</div>
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="slike/capricciosa.jpg" alt="Pizza Capricciosa" loading="lazy">
+                            <div class="slide-caption">Pizza Capricciosa</div>
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="slike/quattro-formaggi.jpg" alt="Pizza Quattro Formaggi" loading="lazy">
+                            <div class="slide-caption">Pizza Quattro Formaggi</div>
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="slike/diavola.jpg" alt="Pizza Diavola" loading="lazy">
+                            <div class="slide-caption">Pizza Diavola</div>
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="slike/vegetariana.jpg" alt="Pizza Vegetariana" loading="lazy">
+                            <div class="slide-caption">Pizza Vegetariana</div>
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="slike/calzone.jpg" alt="Calzone" loading="lazy">
+                            <div class="slide-caption">Calzone</div>
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="slike/pasta-carbonara.jpg" alt="Pasta Carbonara" loading="lazy">
+                            <div class="slide-caption">Pasta Carbonara</div>
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="slike/salata-caprese.jpg" alt="Salata Caprese" loading="lazy">
+                            <div class="slide-caption">Salata Caprese</div>
+                        </div>
+                    </div>
+                </div>
+                <button class="gallery-arrow gallery-arrow-right">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            <div class="gallery-dots"></div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3 class="section-title">Kontaktirajte nas</h3>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p> Dr. Irfana Ljubijankića 66, Bihać 77000</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <p>+387 061-368-367</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>info@pizzeriacity.ba</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <p>Radno vrijeme: 10:00 - 23:00</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="contact-divider">
+                    <div class="divider-line"></div>
+                    <img src="slike/logo.png" alt="Pizzeria City" class="divider-icon">
+                    <div class="divider-line"></div>
+                </div>
+
+                <div class="map-container">
+                    <h4>Naša lokacija</h4>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2830.5999626338553!2d15.869881776055665!3d44.809340676893356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47614012ca520b37%3A0x6207fc3abc382ddf!2sCaffe%20Pizzeria%20%22City%22!5e0!3m2!1shr!2sba!4v1745715260055!5m2!1shr!2sba" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div class="map-address">
+                        <p><i class="fas fa-map-marker-alt"></i> Dr. Irfana Ljubijankića 66, Bihać 77000</p>
+                        <a href="https://maps.google.com?q=Pizzeria+City+Bihac" class="directions-btn" target="_blank">
+                            <i class="fas fa-directions"></i> Pronađite nas
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="slike/logo.png" alt="Pizzeria City Logo">
+                    <h2>PIZZERIA CITY</h2>
+                    <p>Autentična italijanska pizza</p>
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="#home">Početna stranica</a></li>
+                        <li><a href="#about">O nama</a></li>
+                        <li><a href="#menu">Meni</a></li>
+                        <li><a href="#order">Naručite online</a></li>
+                        <li><a href="#gallery">Galerija</a></li>
+                        <li><a href="#contact">Kontaktirajte nas</a></li>
+                    </ul>
+                </div>
+                <div class="footer-legal">
+                    <p>&copy; 2025 Pizzeria City. Sva Prava Zadržana.</p>
+                    <p>Designed by Tarik Abdijanović, Eldin Mešić & Hamdija Delanović.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal">
+        <span class="close-modal">&times;</span>
+        <img src="" alt="" class="modal-img">
+    </div>
+
+    <script src="javascript/main.js"></script>
+</body>
+</html>
