@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="slike/logo.png">
+    <title>Admin Panel | Vezir Restaurant</title>
+    <link rel="stylesheet" href="css/admin-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo-wrapper">
+                <img src="slike/logo.png" alt="Vezir Logo" class="logo-img">
+                <div class="text-wrapper">
+                    <h1 class="restaurant-name">Pizzeria City</h1>
+                    <p class="location">Bihać • Admin Panel</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="admin-content" class="admin-section">
+        <div class="admin-container">
+            <div class="admin-section-header">
+                <h2 class="section-title">Trenutne narudžbe</h2>
+            </div>
+            <div id="orders-container">
+                <!-- Order cards will be populated here dynamically -->
+            </div>
+        </div>
+        
+        <div class="admin-divider">
+            <div class="divider-line"></div>
+            <div class="divider-icon">
+                <i class="fas fa-utensils"></i>
+            </div>
+            <div class="divider-line"></div>
+        </div>
+        
+        <div class="admin-container">
+            <div class="admin-section-header">
+                <h2 class="section-title">Rezervacije stolova</h2>
+            </div>
+            <div id="reservations-container">
+                <!-- Reservation cards will be populated here dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <div id="confirmationModal" class="modal">
+        <div class="modal-content">
+            <h3>Da li ste sigurni?</h3>
+            <p>Želite li označiti ovu narudžbu kao poslanu?</p>
+            <div class="modal-buttons">
+                <button id="confirmButton" class="modal-button confirm">Potvrdi</button>
+                <button id="cancelButton" class="modal-button cancel">Otkaži</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="javascript/admin.js"></script>
+</body>
+</html>
