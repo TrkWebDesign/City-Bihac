@@ -346,7 +346,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
 
             // Send order to server
-            fetch('http://localhost:3000/order', {
+            fetch('http://195.222.35.138:3000/order', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -465,7 +465,7 @@ if (reservationForm) {
         submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Šaljem...';
 
         // Send reservation to server
-        fetch('http://localhost:3000/reservation', {
+        fetch('http://195.222.35.138:3000/reservation', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
