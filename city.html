@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="theme-color" content="#e74c3c">
         <link rel="icon" type="image/png" href="slike/logo.png">
-        <title>Pizzeria City | Autentična Italijanska Pizza u Bihaću</title>
+        <title>Pizzeria City | Restoran Bihać</title>
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,6 +43,7 @@
                     <li><a href="#about"><i class="fas fa-info-circle"></i> O nama</a></li>
                     <li><a href="#menu"><i class="fas fa-utensils"></i> Meni</a></li>
                     <li><a href="#order"><i class="fas fa-shopping-cart"></i> Naruči</a></li>
+                    <li><a href="#reservation"><i class="fas fa-calendar-alt"></i> Rezervacija</a></li>
                     <li><a href="#gallery"><i class="fas fa-images"></i> Galerija</a></li>
                     <li><a href="#contact"><i class="fas fa-phone-alt"></i> Kontakt</a></li>
                 </ul>
@@ -701,7 +702,7 @@
                 </div>
                 
                 <div class="order-cart">
-                    <h4 class="cart-title">Vaša narudžeba</h4>
+                    <h4 class="cart-title">Vaša narudžba</h4>
                     <div class="cart-items">
                         <div class="empty-cart">Vaša korpa je prazna</div>
                     </div>
@@ -712,7 +713,7 @@
                     <button class="checkout-btn">Naručite</button>
                     
                     <div class="checkout-form">
-                        <h4>Podaci za narudžebu</h4>
+                        <h4>Podaci za narudžbu</h4>
                         <div class="form-group">
                             <label for="name">Ime i prezime *</label>
                             <input type="text" id="name" required>
@@ -729,24 +730,109 @@
                             <i class="fas fa-info-circle"></i> Plaćanje pouzećem prilikom preuzimanja
                         </div>
                         <div class="form-group">
-                            <label for="notes">Napomena (opciono)</label>
+                            <label for="notes">Napomena (opcionalno)</label>
                             <textarea id="notes" rows="3"></textarea>
                         </div>
                         <div class="form-actions">
                             <button type="button" class="cancel-order">Odustani</button>
-                            <button type="button" class="submit-order">Potvrdi narudžebu</button>
+                            <button type="button" class="submit-order">Potvrdi narudžbu</button>
                         </div>
                     </div>
                     
                     <div class="order-success">
                         <i class="fas fa-check-circle"></i>
-                        <h4>Hvala na narudžebi!</h4>
-                        <p>Vaša narudžeba je primljena. Kontaktirat ćemo vas u najkraćem mogućem roku.</p>
+                        <h4>Hvala na narudžbi!</h4>
+                        <p>Vaša narudžba je primljena. Kontaktirat ćemo vas u najkraćem mogućem roku.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Add this right before the contact section -->
+<section id="reservation" class="reservation-section">
+    <div class="container">
+        <div class="section-header">
+            <h3 class="section-title">Rezervacija Stolova</h3>
+            <div class="section-subtitle">Zakažite svoje mjesto unaprijed</div>
+            <div class="pizza-divider">
+                <div class="slice"></div>
+                <div class="slice"></div>
+                <div class="slice"></div>
+            </div>
+        </div>
+        
+        <div class="reservation-content">
+            <div class="reservation-form">
+                <form id="booking-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="reservation-name">Ime i prezime *</label>
+                            <input type="text" id="reservation-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="reservation-phone">Broj telefona *</label>
+                            <input type="tel" id="reservation-phone" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="reservation-date">Datum *</label>
+                            <input type="date" id="reservation-date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="reservation-time">Vrijeme *</label>
+                            <input type="time" id="reservation-time" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="reservation-guests">Broj osoba *</label>
+                            <select id="reservation-guests" required>
+                                <option value="">Izaberite...</option>
+                                <option value="1">1 osoba</option>
+                                <option value="2">2 osobe</option>
+                                <option value="3">3 osobe</option>
+                                <option value="4">4 osobe</option>
+                                <option value="5">5 osoba</option>
+                                <option value="6">6 osoba</option>
+                                <option value="7+">7+ osoba</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="reservation-email">Email (opciono)</label>
+                            <input type="email" id="reservation-email">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="reservation-notes">Specijalni zahtjevi (opciono)</label>
+                        <textarea id="reservation-notes" rows="3" placeholder="Na primjer: alergije, proslava, posebna mjesta..."></textarea>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="btn-submit">Potvrdi rezervaciju</button>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="reservation-info">
+                <h4>Informacije o rezervacijama</h4>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> Rezervacije se potvrđuju putem poziva ili SMS-a</li>
+                    <li><i class="fas fa-clock"></i> Molimo vas da dođete 10 minuta prije rezervisanog vremena</li>
+                    <li><i class="fas fa-users"></i> Za grupe veće od 8 osoba, molimo vas da nas kontaktirate direktno</li>
+                    <li><i class="fas fa-utensils"></i> Stolovi se drže maksimalno 15 minuta nakon rezervisanog vremena</li>
+                </ul>
+                
+                <div class="opening-hours">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
     <section id="gallery" class="gallery-section">
         <div class="container">
