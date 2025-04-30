@@ -175,7 +175,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function fetchAndDisplayOrders() {
         if (!ordersContainer) return;
         
-        fetch('http://195.222.35.138:3000/orders')
+        fetch('http://192.168.0.111:3000/orders')
             .then(res => res.json())
             .then(data => {
                 orders = data;
@@ -300,7 +300,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function updateOrderStatus(id, status) {
-        return fetch(`http://195.222.35.138:3000/order/${id}`, {
+        return fetch(`http://192.168.0.111:3000/order/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -342,7 +342,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function fetchAndDisplayReservations() {
         if (!reservationsContainer) return;
         
-        fetch('http://195.222.35.138:3000/reservations')
+        fetch('http://192.168.0.111:3000/reservations')
             .then(res => res.json())
             .then(data => {
                 reservations = data;
@@ -469,7 +469,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function updateReservationStatus(id, status) {
-        return fetch(`http://195.222.35.138:3000/reservation/${id}`, {
+        return fetch(`http://192.168.0.111:3000/reservation/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
