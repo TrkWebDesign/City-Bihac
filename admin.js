@@ -94,6 +94,19 @@ document.addEventListener('DOMContentLoaded', () => {
         window.addEventListener('beforeunload', cleanupIntervals);
     }
 
+    const ADMIN_PASSWORD = "kuhinja123"; // Set this
+
+function checkAuth() {
+  const password = prompt("Enter admin password:");
+  if (password !== ADMIN_PASSWORD) {
+    alert("Access denied!");
+    window.location.href = "/"; // Redirect to public site
+  }
+}
+
+// Call this when admin.html loads
+checkAuth();
+
     // ========== NOTIFICATION SYSTEM ==========
     function updateNotifications() {
         const now = new Date();
