@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="slike/logo.png">
-    <title>Admin Panel | Vezir Restaurant</title>
+    <title>Admin Panel | Pizzeria City</title>
     <link rel="stylesheet" href="css/admin-style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -27,8 +27,10 @@
             <div class="admin-section-header">
                 <h2 class="section-title">Trenutne narudžbe</h2>
             </div>
-            <div id="orders-container">
-                <!-- Order cards will be populated here dynamically -->
+            <div class="scrollable-container">
+                <div id="orders-container">
+                    <!-- Order cards will be populated here dynamically -->
+                </div>
             </div>
         </div>
         
@@ -44,8 +46,10 @@
             <div class="admin-section-header">
                 <h2 class="section-title">Rezervacije stolova</h2>
             </div>
-            <div id="reservations-container">
-                <!-- Reservation cards will be populated here dynamically -->
+            <div class="scrollable-container">
+                <div id="reservations-container">
+                    <!-- Reservation cards will be populated here dynamically -->
+                </div>
             </div>
         </div>
     </section>
@@ -60,6 +64,18 @@
             </div>
         </div>
     </div>
+
+    <!-- Add this right before the closing </body> tag in admin.html -->
+<div id="reservationConfirmationModal" class="modal">
+    <div class="modal-content">
+        <h3 class="modal-title">Potvrdi rezervaciju</h3>
+        <p class="modal-message">Da li ste sigurni da želite potvrditi ovu rezervaciju?</p>
+        <div class="modal-buttons">
+            <button id="reservationConfirmButton" class="modal-button confirm">Potvrdi</button>
+            <button id="reservationCancelButton" class="modal-button cancel">Otkaži</button>
+        </div>
+    </div>
+</div>
 
     <script src="javascript/admin.js"></script>
 </body>
