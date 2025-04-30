@@ -11,23 +11,23 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // ========== MOBILE NAVIGATION ==========
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
 
-hamburger.addEventListener('click', function() {
-    this.classList.toggle('active');
-    navLinks.classList.toggle('active');
-    document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : 'auto';
-});
-
-// Close mobile menu when clicking a link
-document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navLinks.classList.remove('active');
-        document.body.style.overflow = 'auto';
+    hamburger.addEventListener('click', function() {
+        this.classList.toggle('active');
+        navLinks.classList.toggle('active');
+        document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : 'auto';
     });
-});
+
+    // Close mobile menu when clicking a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+    });
 
     // ========== STICKY HEADER ==========
     const header = document.querySelector('.header');
@@ -315,79 +315,81 @@ document.querySelectorAll('.nav-links a').forEach(link => {
     const checkoutForm = document.querySelector('.checkout-form');
     const orderSuccess = document.querySelector('.order-success');
 
-    checkoutBtn.addEventListener('click', function() {
-        if (cart.length === 0) {
-            showToast('Vaša korpa je prazna. Dodajte proizvode prije narudžbe.', 'error');
-            return;
-        }
-
-        checkoutForm.style.display = 'block';
-        this.style.display = 'none';
-    });
-
-    document.querySelector('.cancel-order').addEventListener('click', function() {
-        checkoutForm.style.display = 'none';
-        checkoutBtn.style.display = 'block';
-    });
-
-    document.querySelector('.submit-order').addEventListener('click', function() {
-        const name = document.getElementById('name').value.trim();
-        const phone = document.getElementById('phone').value.trim();
-        const address = document.getElementById('address').value.trim();
-        const notes = document.getElementById('notes').value.trim();
-
-        if (!name || !phone || !address) {
-            showToast('Molimo popunite sva obavezna polja označena sa *.', 'error');
-            return;
-        }
-
-        // Calculate total
-        const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-
-        // Send order to server
-        fetch('http://localhost:3000/order', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                name: name,
-                phone: phone,
-                address: address,
-                note: notes,
-                items: cart,
-                total: total
-            })
-        })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
+    if (checkoutBtn && checkoutForm) {
+        checkoutBtn.addEventListener('click', function() {
+            if (cart.length === 0) {
+                showToast('Vaša korpa je prazna. Dodajte proizvode prije narudžbe.', 'error');
+                return;
             }
-            return response.json();
-        })
-        .then(data => {
-            checkoutForm.style.display = 'none';
-            orderSuccess.style.display = 'block';
-            showToast(`Narudžba #${data.orderId} uspješno poslana! Status: ${data.status}`);
-            
-            // Clear cart after successful order
-            setTimeout(() => {
-                cart = [];
-                saveCart();
-                updateCartDisplay();
-                orderSuccess.style.display = 'none';
-                checkoutBtn.style.display = 'block';
-                document.getElementById('name').value = '';
-                document.getElementById('phone').value = '';
-                document.getElementById('address').value = '';
-                document.getElementById('notes').value = '';
-            }, 5000);
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            showToast('Došlo je do greške pri slanju narudžbe.', 'error');
+
+            checkoutForm.style.display = 'block';
+            this.style.display = 'none';
         });
-    });
+
+        document.querySelector('.cancel-order').addEventListener('click', function() {
+            checkoutForm.style.display = 'none';
+            checkoutBtn.style.display = 'block';
+        });
+
+        document.querySelector('.submit-order').addEventListener('click', function() {
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const address = document.getElementById('address').value.trim();
+            const notes = document.getElementById('notes').value.trim();
+
+            if (!name || !phone || !address) {
+                showToast('Molimo popunite sva obavezna polja označena sa *.', 'error');
+                return;
+            }
+
+            // Calculate total
+            const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+
+            // Send order to server
+            fetch('http://localhost:3000/order', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    name: name,
+                    phone: phone,
+                    address: address,
+                    note: notes,
+                    items: cart,
+                    total: total
+                })
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                checkoutForm.style.display = 'none';
+                orderSuccess.style.display = 'block';
+                showToast(`Narudžba #${data.orderId} uspješno poslana! Status: ${data.status}`);
+                
+                // Clear cart after successful order
+                setTimeout(() => {
+                    cart = [];
+                    saveCart();
+                    updateCartDisplay();
+                    orderSuccess.style.display = 'none';
+                    checkoutBtn.style.display = 'block';
+                    document.getElementById('name').value = '';
+                    document.getElementById('phone').value = '';
+                    document.getElementById('address').value = '';
+                    document.getElementById('notes').value = '';
+                }, 5000);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                showToast('Došlo je do greške pri slanju narudžbe.', 'error');
+            });
+        });
+    }
 
     // Toggle category items visibility
     document.querySelectorAll('.category-header').forEach(header => {
@@ -422,6 +424,98 @@ document.querySelectorAll('.nav-links a').forEach(link => {
             }, 3000);
         }, 100);
     }
+
+    // Add this to your main.js, preferably near the order system code
+
+// ========== RESERVATION SYSTEM ==========
+const reservationForm = document.getElementById('booking-form');
+if (reservationForm) {
+    // Set minimum date to today
+    const dateInput = document.getElementById('reservation-date');
+    dateInput.min = new Date().toISOString().split('T')[0];
+    
+    reservationForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const name = document.getElementById('reservation-name').value.trim();
+        const email = document.getElementById('reservation-email').value.trim();
+        const phone = document.getElementById('reservation-phone').value.trim();
+        const date = document.getElementById('reservation-date').value;
+        const time = document.getElementById('reservation-time').value;
+        const guests = document.getElementById('reservation-guests').value;
+        const note = document.getElementById('reservation-notes').value.trim();
+
+        // Validate required fields
+        if (!name || !phone || !date || !time || !guests) {
+            showToast('Molimo popunite sva obavezna polja označena sa *.', 'error');
+            return;
+        }
+
+        // Validate date is in the future
+        const reservationDateTime = new Date(`${date}T${time}`);
+        if (reservationDateTime < new Date()) {
+            showToast('Molimo odaberite datum i vrijeme u budućnosti.', 'error');
+            return;
+        }
+
+        // Show loading state
+        const submitBtn = reservationForm.querySelector('button[type="submit"]');
+        const originalBtnText = submitBtn.innerHTML;
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Šaljem...';
+
+        // Send reservation to server
+        fetch('http://localhost:3000/reservation', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                name: name,
+                email: email,
+                phone: phone,
+                date: date,
+                time: time,
+                guests: parseInt(guests),
+                note: note
+            })
+        })
+        .then(response => {
+            if (!response.ok) {
+                return response.json().then(err => { throw err; });
+            }
+            return response.json();
+        })
+        .then(data => {
+            showToast(`Rezervacija #${data.reservationId} uspješno poslana! Status: ${data.status}`);
+            reservationForm.reset();
+            
+            // Show success message
+            const successMessage = document.createElement('div');
+            successMessage.className = 'reservation-success-message';
+            successMessage.innerHTML = `
+                <i class="fas fa-check-circle"></i>
+                <h4>Hvala na rezervaciji!</h4>
+                <p>Vaša rezervacija #${data.reservationId} je primljena.</p>
+                <p>Status: <strong>${data.status}</strong></p>
+            `;
+            reservationForm.parentNode.insertBefore(successMessage, reservationForm.nextSibling);
+            
+            setTimeout(() => {
+                successMessage.remove();
+            }, 5000);
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            const errorMsg = error.error || 'Došlo je do greške pri slanju rezervacije.';
+            showToast(errorMsg, 'error');
+        })
+        .finally(() => {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalBtnText;
+        });
+    });
+}
 
     // Initialize cart display
     updateCartDisplay();
