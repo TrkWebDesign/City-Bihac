@@ -1627,6 +1627,270 @@ ul {
     background-color: #e74c3c;
 }
 
+/* Reservation Section - Professional Style */
+.reservation-section {
+    padding: 100px 0;
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), 
+                url('../slike/wood-texture.jpg') center/cover no-repeat fixed;
+    position: relative;
+    color: #333;
+}
+
+.reservation-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-top: 50px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.reservation-form {
+    flex: 1;
+    min-width: 350px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 5px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-top: 3px solid #e74c3c;
+}
+
+.reservation-info {
+    flex: 1;
+    min-width: 350px;
+    padding: 30px 0;
+}
+
+.section-header .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: #222;
+    letter-spacing: 1px;
+}
+
+.section-header .section-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #777;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+.form-row {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    flex: 1;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: #555;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 14px 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    background: #fafafa;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #e74c3c;
+    outline: none;
+    background: #fff;
+    box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.1);
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.btn-submit {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 16px 40px;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(192, 57, 43, 0.3);
+}
+
+.reservation-info h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.reservation-info h4::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 2px;
+    background: #e74c3c;
+}
+
+.reservation-info ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 40px;
+}
+
+.reservation-info li {
+    margin-bottom: 20px;
+    padding-left: 35px;
+    position: relative;
+    line-height: 1.6;
+    font-family: 'Montserrat', sans-serif;
+    color: #555;
+}
+
+.reservation-info li i {
+    position: absolute;
+    left: 0;
+    top: 3px;
+    color: #e74c3c;
+    font-size: 18px;
+}
+
+.opening-hours {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    border-top: 3px solid #e74c3c;
+}
+
+.opening-hours h5 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #e74c3c;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.opening-hours table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.opening-hours td {
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    color: #555;
+}
+
+.opening-hours tr:last-child td {
+    border-bottom: none;
+}
+
+.opening-hours td:first-child {
+    font-weight: 500;
+    color: #333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .reservation-content {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .reservation-content {
+        flex-direction: column;
+    }
+    
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .reservation-form {
+        padding: 30px;
+    }
+    
+    .reservation-info {
+        padding: 30px 0 0 0;
+    }
+}
+
+/* Success message styling */
+.reservation-success {
+    text-align: center;
+    padding: 50px 30px;
+    background: #fff;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: none;
+    border-top: 3px solid #2ecc71;
+}
+
+.reservation-success i {
+    font-size: 60px;
+    color: #2ecc71;
+    margin-bottom: 25px;
+}
+
+.reservation-success h4 {
+    color: #2ecc71;
+    margin-bottom: 15px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+}
+
+.reservation-success p {
+    color: #555;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
 /* ===== RESPONSIVE STYLES ===== */
 @media (max-width: 1200px) {
     .order-content {
