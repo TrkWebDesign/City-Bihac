@@ -346,26 +346,26 @@ document.addEventListener('DOMContentLoaded', function() {
             const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
 
             // Send order to server
-            fetch('http://195.222.35.138:3000/order', {
+            fetch('http://192.168.0.111:3000/order', {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json',
+                  'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
-                    name: name,
-                    phone: phone,
-                    address: address,
-                    note: notes,
-                    items: cart,
-                    total: total
+                  name: name,
+                  phone: phone,
+                  address: address,
+                  note: notes,
+                  items: cart,
+                  total: total
                 })
-            })
-            .then(response => {
+              })
+              .then(response => {
                 if (!response.ok) {
-                    throw new Error('Network response was not ok');
+                  return response.text().then(text => { throw new Error(text) });
                 }
                 return response.json();
-            })
+              })
             .then(data => {
                 checkoutForm.style.display = 'none';
                 orderSuccess.style.display = 'block';
